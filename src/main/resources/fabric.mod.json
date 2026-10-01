@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "excavator",
+	"version": "${version}",
+	"name": "excavator",
+	"description": "Easy way to mine!",
+	"authors": [
+		"VideoRab"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/excavator/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.videorab.Excavator"
+		],
+		"client": [
+			"me.videorab.client.ExcavatorClient"
+		]
+	},
+	"mixins": [
+		"excavator.mixins.json",
+		{
+			"config": "excavator.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
